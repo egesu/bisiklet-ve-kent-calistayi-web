@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+// You can add global styles to this file, and also import other style files
+@import 'variables';
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/mixins';
+
+$text-color: #3c3d43 !default;
+
+.contains-spinner {
+  position: relative;
+}
+
+.page {
+  padding-top: 1rem;
+  position: relative;
+}
+
+body {
+  color: $text-color;
+  min-height: 100vh;
+  padding-bottom: 5rem;
+  position: relative;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
