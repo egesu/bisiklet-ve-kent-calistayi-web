@@ -1,6 +1,6 @@
 var casper = require('casper').create();
 var fs = require('fs');
-var baseUrl = 'http://localhost:4200/';
+var baseUrl = 'http://calistay.donkisotbisikletkolektifi.org/';
 var pages = [
   '',
   'program',
