@@ -16,15 +16,78 @@ $text-color: #3c3d43 !default;
 }
 
 body {
+  background-image: url('assets/ust-bant.svg');
+  background-repeat: no-repeat;
+  background-size: 300%; // for screens with width lower than 500px
   color: $text-color;
   min-height: 100vh;
-  padding-bottom: 5rem;
+  padding-bottom: 10vw;
   position: relative;
 }
 
+nav {
+  background-color: $dark;
+  margin-bottom: 5rem; // for screens with width lower than 500px
+}
+
 footer {
+  background-color: transparent;
+  background-image: url('assets/alt-bant.svg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
   bottom: 0;
   left: 0;
+  min-height: 8.3vw;
+  padding-top: 10vw;
   position: absolute;
   right: 0;
+  z-index: -10;
+}
+
+@media(min-width: 500px) {
+  body {
+    background-position-y: 0;
+    background-size: 180%;
+  }
+}
+
+@media(min-width: 768px) {
+  body {
+    background-position-y: 0;
+    background-size: 150%;
+  }
+}
+
+@media(min-width: 1024px) {
+  body {
+    background-position-y: 0;
+    background-size: auto;
+  }
+
+  nav {
+    background: transparent;
+  }
+}
+
+@media(min-width: 1350px) {
+  body {
+    background-position-y: 0;
+    background-size: auto;
+  }
+
+  nav {
+    margin-bottom: 7rem;
+  }
+}
+
+@media(min-width: 1920px) {
+  body {
+    background-position-y: -2rem;
+    background-size: auto;
+  }
+
+  nav {
+    margin-bottom: 10rem;
+  }
 }
