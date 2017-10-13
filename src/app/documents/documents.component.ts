@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ConfigurePiwikTracker, UsePiwikTracker } from 'angular2piwik';
+
 @Component({
   selector: 'app-documents',
   templateUrl: './documents.component.html',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocumentsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private piwik: UsePiwikTracker,
+    private piwikConfigure: ConfigurePiwikTracker) { }
 
   ngOnInit() {
+    this.piwikConfigure.setDocumentTitle();
+    this.piwik.trackPageView();
   }
 
 }

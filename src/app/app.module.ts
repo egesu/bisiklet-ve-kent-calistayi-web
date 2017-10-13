@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { Angular2PiwikModule, UsePiwikTracker, ConfigurePiwikTracker } from 'angular2piwik';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SpinnerComponentModule } from 'ng2-component-spinner';
 
@@ -24,12 +25,16 @@ import { DocumentsComponent } from './documents/documents.component';
   imports: [
     BrowserModule,
 
+    Angular2PiwikModule,
     NgbModule.forRoot(),
     SpinnerComponentModule,
 
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    UsePiwikTracker,
+    ConfigurePiwikTracker,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
