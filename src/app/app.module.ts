@@ -33,10 +33,6 @@ import { PressComponent } from './press/press.component';
 
     AppRoutingModule,
   ],
-  providers: [
-    UsePiwikTracker,
-    ConfigurePiwikTracker,
-  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
