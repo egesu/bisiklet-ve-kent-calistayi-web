@@ -7,7 +7,8 @@ import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-press',
   templateUrl: './press.component.html',
-  styleUrls: ['./press.component.scss']
+  styleUrls: ['./press.component.scss'],
+  providers: [UsePiwikTracker, ConfigurePiwikTracker],
 })
 export class PressComponent implements OnInit {
 

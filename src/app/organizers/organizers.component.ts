@@ -7,7 +7,8 @@ import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-organizers',
   templateUrl: './organizers.component.html',
-  styleUrls: ['./organizers.component.scss']
+  styleUrls: ['./organizers.component.scss'],
+  providers: [UsePiwikTracker, ConfigurePiwikTracker],
 })
 export class OrganizersComponent implements OnInit {
 

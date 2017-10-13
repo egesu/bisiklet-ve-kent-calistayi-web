@@ -7,7 +7,8 @@ import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-reasons',
   templateUrl: './reasons.component.html',
-  styleUrls: ['./reasons.component.scss']
+  styleUrls: ['./reasons.component.scss'],
+  providers: [UsePiwikTracker, ConfigurePiwikTracker],
 })
 export class ReasonsComponent implements OnInit {
 

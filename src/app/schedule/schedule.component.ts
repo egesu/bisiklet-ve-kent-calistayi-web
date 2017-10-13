@@ -7,7 +7,8 @@ import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-schedule',
   templateUrl: './schedule.component.html',
-  styleUrls: ['./schedule.component.scss']
+  styleUrls: ['./schedule.component.scss'],
+  providers: [UsePiwikTracker, ConfigurePiwikTracker],
 })
 export class ScheduleComponent implements OnInit {
 
