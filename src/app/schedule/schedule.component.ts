@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { ConfigurePiwikTracker, UsePiwikTracker } from 'angular2piwik';
 
+import { environment } from '../../environments/environment';
+
 @Component({
   selector: 'app-schedule',
   templateUrl: './schedule.component.html',
@@ -15,8 +17,10 @@ export class ScheduleComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.piwikConfigure.setDocumentTitle();
-    this.piwik.trackPageView();
+    if (!environment.production) {
+      this.piwikConfigure.setDocumentTitle();
+      this.piwik.trackPageView();
+    }
   }
 
 }
