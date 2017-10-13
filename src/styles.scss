@@ -21,7 +21,7 @@ body {
   background-size: 300%; // for screens with width lower than 500px
   color: $text-color;
   min-height: 100vh;
-  padding-bottom: 10vw;
+  padding-bottom: 17vw;
   position: relative;
 }
 
@@ -35,11 +35,11 @@ footer {
   background-image: url('assets/alt-bant.svg');
   background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: 101%;
+  background-size: cover;
   bottom: 0;
   left: 0;
   min-height: 8.3vw;
-  padding-top: 10vw;
+  padding-top: 13vw;
   position: absolute;
   right: 0;
 }
