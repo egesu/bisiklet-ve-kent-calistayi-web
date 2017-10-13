@@ -12,6 +12,7 @@ import { ReasonsComponent } from './reasons/reasons.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { OrganizersComponent } from './organizers/organizers.component';
 import { DocumentsComponent } from './documents/documents.component';
+import { PressComponent } from './press/press.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DocumentsComponent } from './documents/documents.component';
     ReasonsComponent,
     ScheduleComponent,
     OrganizersComponent,
-    DocumentsComponent
+    DocumentsComponent,
+    PressComponent
   ],
   imports: [
     BrowserModule,

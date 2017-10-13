@@ -6,6 +6,7 @@ import { ReasonsComponent } from './reasons/reasons.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { OrganizersComponent } from './organizers/organizers.component';
 import { DocumentsComponent } from './documents/documents.component';
+import { PressComponent } from './press/press.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'belgeler',
     component: DocumentsComponent,
+  },
+  {
+    path: 'basindan',
+    component: PressComponent,
   },
 ];
 
