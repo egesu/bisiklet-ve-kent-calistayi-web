@@ -7,6 +7,7 @@ var pages = [
   'paydaslar',
   'neden',
   'belgeler',
+  'basindan',
 ];
 
 casper.on('error', function(msg) {
