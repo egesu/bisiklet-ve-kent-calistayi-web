@@ -15,6 +15,10 @@ $text-color: #3c3d43 !default;
   position: relative;
 }
 
+.video iframe {
+  max-width: 100%;
+}
+
 body {
   background-image: url('assets/ust-bant.svg');
   background-repeat: no-repeat;
