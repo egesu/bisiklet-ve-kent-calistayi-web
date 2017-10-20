@@ -9,6 +9,18 @@
     </div>
   </div>
 
+  <div class="text-center mb-5 live-stream" *ngIf="liveStreamUrl">
+    <div class="ml-lg-5 mr-lg-5">
+      <iframe
+        [src]="liveStreamUrl"
+        frameborder="0"
+        allowTransparency="true"
+        allowFullScreen="true"
+        scrolling="no"
+      ></iframe>
+    </div>
+  </div>
+
   <div class="row mb-lg-4">
     <div class="col-12 col-lg-6">
       <h1>Nedir?</h1>
