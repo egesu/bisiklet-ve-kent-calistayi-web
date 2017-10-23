@@ -13,6 +13,7 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { OrganizersComponent } from './organizers/organizers.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { PressComponent } from './press/press.component';
+import { ConclusionComponent } from './conclusion/conclusion.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PressComponent } from './press/press.component';
     ScheduleComponent,
     OrganizersComponent,
     DocumentsComponent,
-    PressComponent
+    PressComponent,
+    ConclusionComponent
   ],
   imports: [
     BrowserModule,

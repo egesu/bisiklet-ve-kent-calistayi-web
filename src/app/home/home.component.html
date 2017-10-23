@@ -9,7 +9,18 @@
     </div>
   </div>
 
-  <div class="text-center mb-5 live-stream">
+  <div class="text-center mb-5" *ngIf="environment.conclusionIsActive">
+    <div class="ml-lg-5 mr-lg-5">
+      <h3>
+        Bisiklet ve Kent Çalıştayı 2017 21-22 Ekim tarihlerinde yapıldı.
+      </h3>
+      <h4>
+        <a [routerLink]="['/sonuc']"><strong>Sonuç metni ve video için tıklayın!</strong></a>
+      </h4>
+    </div>
+  </div>
+
+  <div class="text-center mb-5 live-stream" *ngIf="environment.twitterStreamIsActive">
     <div class="ml-lg-5 mr-lg-5">
       <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%3Adonkisotcycling%20filter%3Aperiscope" data-widget-id="921666036914515968">Tweets about from:donkisotcycling filter:periscope</a>
     </div>

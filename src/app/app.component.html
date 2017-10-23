@@ -45,6 +45,12 @@
         routerLink="/basindan"
         routerLinkActive="active"
       >Basından</a>
+      <a
+        class="nav-item nav-link"
+        routerLink="/sonuc"
+        routerLinkActive="active"
+        *ngIf="environment.conclusionIsActive"
+      >Sonuç</a>
     </div>
   </div>
 </nav>

@@ -8,6 +8,7 @@ var pages = [
   'neden',
   'belgeler',
   'basindan',
+  'sonuc',
 ];
 
 casper.on('error', function(msg) {

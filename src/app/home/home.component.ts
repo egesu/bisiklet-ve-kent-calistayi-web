@@ -13,6 +13,7 @@ import { environment } from '../../environments/environment';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   public liveStreamUrl: SafeResourceUrl;
+  public environment = environment;
 
   constructor(
     private piwik: UsePiwikTracker,
@@ -25,24 +26,22 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.piwikConfigure.setDocumentTitle();
       this.piwik.trackPageView();
     }
-
-    if (environment.liveStream) {
-      this.liveStreamUrl = this.sanitizer.bypassSecurityTrustResourceUrl(environment.liveStream);
-    }
   }
 
   ngAfterViewInit() {
-    !function(d, s, id) {
-      var js: any,
-        fjs = d.getElementsByTagName(s)[0],
-        p = 'https';
-      if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = p + "://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
+    if (environment.twitterStreamIsActive) {
+      !function(d, s, id) {
+        var js: any,
+          fjs = d.getElementsByTagName(s)[0],
+          p = 'https';
+        if (!d.getElementById(id)) {
+          js = d.createElement(s);
+          js.id = id;
+          js.src = p + "://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }
       }
+        (document, "script", "twitter-wjs");
     }
-      (document, "script", "twitter-wjs");
   }
 }

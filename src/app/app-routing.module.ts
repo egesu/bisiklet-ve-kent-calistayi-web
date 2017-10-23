@@ -7,6 +7,7 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { OrganizersComponent } from './organizers/organizers.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { PressComponent } from './press/press.component';
+import { ConclusionComponent } from './conclusion/conclusion.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'basindan',
     component: PressComponent,
+  },
+  {
+    path: 'sonuc',
+    component: ConclusionComponent,
   },
 ];
 
