@@ -6,5 +6,5 @@
 export const environment = {
   production: false,
   twitterStreamIsActive: false,
-  conclusionIsActive: true,
+  conclusionIsActive: false,
 };

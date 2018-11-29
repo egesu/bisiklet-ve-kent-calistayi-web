@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { Angular2PiwikModule, UsePiwikTracker, ConfigurePiwikTracker } from 'angular2piwik';
+import { Angulartics2Module } from 'angulartics2';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SpinnerComponentModule } from 'ng2-component-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,9 +28,8 @@ import { ConclusionComponent } from './conclusion/conclusion.component';
   imports: [
     BrowserModule,
 
-    Angular2PiwikModule,
+    Angulartics2Module.forRoot(),
     NgbModule.forRoot(),
-    SpinnerComponentModule,
 
     AppRoutingModule,
   ],

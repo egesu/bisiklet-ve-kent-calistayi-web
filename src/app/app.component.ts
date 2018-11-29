@@ -1,25 +1,23 @@
 import { Component } from '@angular/core';
 
-import { InitializePiwik } from 'angular2piwik';
+import { Angulartics2Piwik } from 'angulartics2/piwik';
 
 import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  providers: [InitializePiwik],
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   public title = 'app';
   public isNavbarCollapsed = true;
-  public spinner = false;
   public environment = environment;
 
   constructor(
-    private initializePiwik: InitializePiwik
+    private piwik: Angulartics2Piwik
   ) {
     const url = `//piwik.buyutec.xyz/`;
-    initializePiwik.init(url, 1);
+    piwik.startTracking();
   }
 }

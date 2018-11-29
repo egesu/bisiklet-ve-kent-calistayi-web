@@ -1,27 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ConfigurePiwikTracker, UsePiwikTracker } from 'angular2piwik';
-
-import { environment } from '../../environments/environment';
-
 @Component({
   selector: 'app-schedule',
   templateUrl: './schedule.component.html',
   styleUrls: ['./schedule.component.scss'],
-  providers: [UsePiwikTracker, ConfigurePiwikTracker],
 })
 export class ScheduleComponent implements OnInit {
 
-  constructor(
-    private piwik: UsePiwikTracker,
-    private piwikConfigure: ConfigurePiwikTracker
-  ) { }
+  constructor() { }
 
-  ngOnInit() {
-    if (!environment.production) {
-      this.piwikConfigure.setDocumentTitle();
-      this.piwik.trackPageView();
-    }
-  }
+  ngOnInit() { }
 
 }
