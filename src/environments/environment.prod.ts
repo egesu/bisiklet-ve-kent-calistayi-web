@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   twitterStreamIsActive: false,
-  conclusionIsActive: true,
+  conclusionIsActive: false,
 };
